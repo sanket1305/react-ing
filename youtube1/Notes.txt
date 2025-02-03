@@ -1,0 +1,9 @@
+1. React uses components (as nodes) wich are linked to each other.
+2. React checks the state of each component and compares it with it's own previous state. If there is any change, then only react reloads that component.
+3. This reloading of component is actually done by "react dom"... check in package.json
+
+React is Library, where as Angular and Vue are framework
+What's the difference? Library is provides a tool that provides specific functionality, while a framework provides a set of tools and guidelines for building apps.
+Library => Tool, Framework => Toolsets
+
+React is only used for creating dynamic UI... but we need additional tools for routing, http, managing app state, internationalization, form validation, animations, etc.
