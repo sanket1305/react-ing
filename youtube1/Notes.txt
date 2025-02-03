@@ -7,3 +7,9 @@ What's the difference? Library is provides a tool that provides specific functio
 Library => Tool, Framework => Toolsets
 
 React is only used for creating dynamic UI... but we need additional tools for routing, http, managing app state, internationalization, form validation, animations, etc.
+
+Fragment is a way to group multiple elements without adding an extra node to the DOM. It is useful to avoid unnecessary wrappers.
+
+In JSX, we can only use HTML or other React Components.
+
+In React, each list item SHOULD have a UNIQUE key prop.
