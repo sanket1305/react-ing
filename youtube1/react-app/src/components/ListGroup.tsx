@@ -1,13 +1,18 @@
 import { Fragment, useState } from "react";
 
-function ListGroup() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+// we can pass data to componenet as an argument, for which we use prop
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: ListGroupProps) {
   // let selectedIndex = 0;
   // Hook
   // const  arr = useState(-1);
   // arr[0] // variable (selectedIndex)
   // arr[1] // updater function\
-  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   // const [name, setName] = useState('') // example for string type
 
   const message = items.length === 0 ? <p>No item found</p> : null;
@@ -21,7 +26,7 @@ function ListGroup() {
   return (
     // we can also use <> </> to use fragments without actually importing them
     <Fragment>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {getMessage()}
       <ul className="list-group">
         {items.map((item, index) => (
@@ -32,7 +37,9 @@ function ListGroup() {
                 : "list-group-item"
             }
             key={item}
-            onClick={() => {setSelectedIndex(index);}}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>
