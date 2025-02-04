@@ -13,3 +13,7 @@ Fragment is a way to group multiple elements without adding an extra node to the
 In JSX, we can only use HTML or other React Components.
 
 In React, each list item SHOULD have a UNIQUE key prop.
+
+By default react is not aware of data changes for any of the variables, so we have to use "State Hook".
+Note: Each component will have there own separate state (so if we create 2 comnponents of SAME TYPE, then their state does not depend on each other)
+
