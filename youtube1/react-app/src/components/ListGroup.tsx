@@ -4,9 +4,11 @@ import { Fragment, useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
+  // (item: string) => void
+  onSelectItem: (item: string) => void; // onClick
 }
 
-function ListGroup({ items, heading }: ListGroupProps) {
+function ListGroup({ items, heading, onSelectItem}: ListGroupProps) {
   // let selectedIndex = 0;
   // Hook
   // const  arr = useState(-1);
@@ -39,6 +41,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item)
             }}
           >
             {item}

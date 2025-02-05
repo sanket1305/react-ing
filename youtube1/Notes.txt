@@ -17,3 +17,10 @@ In React, each list item SHOULD have a UNIQUE key prop.
 By default react is not aware of data changes for any of the variables, so we have to use "State Hook".
 Note: Each component will have there own separate state (so if we create 2 comnponents of SAME TYPE, then their state does not depend on each other)
 
+Note: In react we don't call a function, we just provide a reference to it (notice that we did not pass paranthesis) and then react takes of it by doing a function call on listening to particular event
+
+Props vs State
+1. Props => input passed to a component, State => Data managed by a component
+2. Props => Similar to function args, State => Similar to local variables
+3. Props => SHOULD BE treated as IMMUTABLE, State => Mutable (that's the whole purpose of state, to inform react that there has been some change in the component)
+4. Any time either Props or State changes, the react will update the DOM accordingly.
